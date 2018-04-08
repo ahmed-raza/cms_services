@@ -27,15 +27,13 @@ class CMSServicesController extends ControllerBase {
         if ($node->hasField($field->getName())) {
           $data[$nid][$field->getName()] = $node->{$field->getName()}->getValue();
           if ($field->getType() == 'entity_reference' && $field->getSetting('target_type') == 'taxonomy_term') {
-            foreach ($data[$nid][$field->getName()]['target_id'] as $tid) {
-              kint($tid);
-              // $data[$nid][$field->getName()][] = ['name'=>taxonomy_term_load($tid['target_id'])->getName()];
+            foreach ($data[$nid][$field->getName()] as $key => $tid) {
+              $data[$nid][$field->getName()][$key] = ['name'=>taxonomy_term_load($tid['target_id'])->getName()];
             }
           }
         }
       }
     }
-    die;
 
     $response = [
       'type' => $type,
