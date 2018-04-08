@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains cms_services.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cms_services_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cms_services module.
+    case 'help.page.cms_services':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides content via services.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

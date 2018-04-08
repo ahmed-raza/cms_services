@@ -1,0 +1,14 @@
+{
+  "name": "drupal/cms_services",
+  "type": "drupal-module",
+  "description": "Provides content via services.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/cms_services",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/cms_services",
+    "source": "http://cgit.drupalcode.org/cms_services"
+  },
+  "require": { }
+}

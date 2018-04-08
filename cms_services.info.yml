@@ -1,0 +1,7 @@
+name: 'CMS Services'
+type: module
+description: 'Provides content via services.'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - node

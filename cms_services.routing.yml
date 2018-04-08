@@ -1,0 +1,8 @@
+
+cms_services.c_m_s_services_controller_content:
+  path: 'api/nodes/{type}'
+  defaults:
+    _controller: '\Drupal\cms_services\Controller\CMSServicesController::content'
+    _title: 'getNodes'
+  requirements:
+    _permission: 'access content'
